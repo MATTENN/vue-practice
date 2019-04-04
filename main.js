@@ -2,7 +2,9 @@ var app = new Vue({
     el: '#app',
     data: {
         he: 0,
-        textColor: 'black'
+        styleObject:{
+            color: 'black'
+        }
     },
     methods: {
         handleClick: function(event){
@@ -13,7 +15,7 @@ var app = new Vue({
                 this.he++;
             }
             if(this.he == 20){
-                this.textColor = "red";
+                this.styleObject.color = 'red';
             }
         }
     }
