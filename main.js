@@ -1,7 +1,20 @@
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'ご注文はうさぎですか？',
-        chara: ['保登心愛','香風智乃','天々座理世','宇治松千夜','桐間紗路']
+        he: 0,
+        textColor: 'black'
+    },
+    methods: {
+        handleClick: function(event){
+            alert(event.target)
+        },
+        increment: function(){
+            if(this.he < 20){
+                this.he++;
+            }
+            if(this.he == 20){
+                this.textColor = "red";
+            }
+        }
     }
   })
