@@ -45,8 +45,7 @@ var app = new Vue({
                 id: maxid + 1,
                 name: this.name,
                 org: this.org,
-                fullname: this.fullname,
-                image: this.image
+                fullname: this.fullname
             })
         },
         doRemove: function(index){
