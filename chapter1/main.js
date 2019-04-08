@@ -2,6 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
         he: 0,
+        manhe: false,
         styleObject:{
             color: 'black'
         }
@@ -15,8 +16,9 @@ var app = new Vue({
                 this.he++;
             }
             if(this.he == 20){
+                this.manhe = true,
                 this.styleObject.color = 'red';
             }
         }
     }
-  })
+  });

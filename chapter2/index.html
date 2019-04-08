@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+  <title>He Button</title>
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+  <div id="gochiusa">
+      <ul>
+          <li v-for="(member,index) in members" v-bind:class="{ rh: member.org == 'rabbithouse' }">
+              {{ member.id }}.{{ member.fullname }} <span v-on:click="doRemove(index)">[x]</span>
+          </li>
+      </ul>
+      <br>
+      <br>
+      name:<input type="text" v-model="name"><br>
+      fullname:<input type="text" v-model="fullname"><br>
+      image:<input type="text" v-model="image"><br>
+      org:<input type="text" v-model="org"><br>
+      <button v-on:click="doAdd">メンバーを追加</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
